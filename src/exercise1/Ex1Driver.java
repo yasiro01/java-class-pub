@@ -30,7 +30,10 @@ public class Ex1Driver {
    * TODO: Task 1: Print "Hello World" to the default system output
    */
   public static void task1() {
-    throw new UnsupportedOperationException("Task 1 is not implemented yet.");
+      
+      
+      
+      throw new UnsupportedOperationException("Task 1 is not implemented yet.");
   }
   /**
    * TODO: Task 2: Print all numbers between 1 and 100 (inclusive) replacing all multiples of 3 with "foo", multiples of 5 with "bar", multiples of 3 and 5 with "huh"

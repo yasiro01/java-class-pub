@@ -1,7 +1,7 @@
 package exercise5;
 
 /**
- * @author yasiro01
+ * @author Teboho Samuel Nteso
  */
 public class Ex5Driver {
   public static void main(String[] args) {

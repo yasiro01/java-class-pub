@@ -1,3 +1,5 @@
+import java.io.InputStream;
+import java.io.PrintStream;
 import java.util.Scanner;
 import java.util.Random;
 
@@ -24,6 +26,9 @@ public class Ex1Driver {
     task10();
   }
 
+  // If your code isn't passing the unit tests, check your print statements.
+  // Are they print, printf, or println? Tests often expect println.
+  
   /**
    * TODO: Task 1: Print "Hello World" to the default system output
    */
@@ -85,7 +90,7 @@ public class Ex1Driver {
   /**
    * TODO: Task 5: Ask a user to enter their full name and print the initials (ie John Q Doe should yield JQD)
    */
-  public static void task5() {
+  public static void task5(InputStream in, PrintStream out) {
     String fullname = "";
     Scanner keyboard = new Scanner(System.in);
     System.out.println("Please enter your full name");
@@ -99,6 +104,7 @@ public class Ex1Driver {
     System.out.println("Your initials are " + initials);
     }
     catch (Exception e) {
+        System.out.println(e);
         System.out.println("Oops! No input detected");
     }
 
@@ -113,8 +119,6 @@ public class Ex1Driver {
         array6[idx]=idx*idx*idx;
         System.out.print(array6[idx] + " ");
     }
-    System.out.println();
-    System.out.println();
 
     //throw new UnsupportedOperationException("Task 6 is not implemented yet.");
   }
@@ -167,7 +171,6 @@ public class Ex1Driver {
     }
     display = display + "]";
     System.out.printf("Sum of all items in %s is " + sum8 + "\n", display);
-    System.out.println();
     return sum8;
 
     //throw new UnsupportedOperationException("Task 8 is not implemented yet.");
@@ -210,7 +213,7 @@ public class Ex1Driver {
    * TODO: Task 10: Implement sieve of Eratosthenes and print all prime numbers between 1 and 100
    */
   public static void task10() {
-    System.out.println("---Task 10---");
+    System.out.println("Prime numbers between 1 and 100");
     int n = 100;
     boolean[] array10 = new boolean[n];
     for (int i=0; i<array10.length; i++) {

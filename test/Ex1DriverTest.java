@@ -1,6 +1,7 @@
 import java.io.ByteArrayOutputStream;
 import java.io.ByteArrayInputStream;
 import java.io.PrintStream;
+import java.util.Random;
 import java.util.Scanner;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -207,23 +208,42 @@ public class Ex1DriverTest {
     @Test
     public void testTask5() {
         System.out.println("task5");
+        //Test for no input
+//        System.setOut(new PrintStream(outContent));
+//        Ex1Driver.task5();
+//        
+//        Throwable exception = assertThrown(IllegalArgumentException.class, () -> {
+//            throw new IllegalArgumentException("a message");
+//        });
+//        assertEquals("a message", exception.getMessage());
+//        
+
+//      java.lang.StringIndexOutOfBoundsException: String index out of range: 1
+
+        
         //Hijack the output
         System.setOut(new PrintStream(outContent));
         Ex1Driver.task5();
+        System.setOut(System.out);
+        
         // Hijack the input
-        String data = "John Q Doe\n" + "Roman Yasinovskyy\n";
+        String data = "John Q Doe" + "\nRoman Yasinovskyy";
         System.setIn(new ByteArrayInputStream(data.getBytes()));
         Scanner scanner = new Scanner(System.in);
         System.out.println(scanner.nextLine());
+        
+        System.setOut(new PrintStream(outContent));
         String expectedResult1 = "Your initials are JQD\n";
         assertEquals(expectedResult1, outContent.toString());
+        System.setOut(System.out);
+        
         System.out.println(scanner.nextLine());
         String expectedResult2 = "Your initials are RY\n";
+        
+        System.setOut(new PrintStream(outContent));
         assertEquals(expectedResult2, outContent.toString());
         System.setOut(System.out);
         
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -232,10 +252,11 @@ public class Ex1DriverTest {
     @Test
     public void testTask6() {
         System.out.println("task6");
+        System.setOut(new PrintStream(outContent));
         Ex1Driver.task6();
-        String expectedResult = "0 1 8 27 64 125 216 343 512 729 \n";
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        String expectedResult = "0 1 8 27 64 125 216 343 512 729 ";
+        assertEquals(expectedResult, outContent.toString());
+        System.setOut(System.out);
     }
 
     /**
@@ -244,7 +265,16 @@ public class Ex1DriverTest {
     @Test
     public void testTask7() {
         System.out.println("task7");
+        
+        //Test 42 (should NOT be found)
+        System.setOut(new PrintStream(outContent));
         Ex1Driver.task7();
+        String expectedResult = "";
+        assertEquals(expectedResult, outContent.toString());
+        
+        //Test 24 (should be found)
+        
+        
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -255,10 +285,15 @@ public class Ex1DriverTest {
     @Test
     public void testTask8() {
         System.out.println("task8");
-        int[] numbers = null;
-        int expResult = 0;
+        Random rnd = new Random();
+        rnd.setSeed(252);
+        int[] numbers = new int[10];
+        for (int i = 0; i < 10; i++) {
+          numbers[i] = rnd.nextInt(10);
+        }
+        int expectedResult = 31;
         int result = Ex1Driver.task8(numbers);
-        assertEquals(expResult, result);
+        assertEquals(expectedResult, result);
     }
 
     /**
@@ -281,7 +316,7 @@ public class Ex1DriverTest {
         System.setOut(new PrintStream(outContent));
         Ex1Driver.task10();
         String expectedResult = "Prime numbers between 1 and 100\n" +
-            "2 3 4 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 \n";
+            "2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 \n";
         assertEquals(expectedResult, outContent.toString());
         System.setOut(System.out);
     }

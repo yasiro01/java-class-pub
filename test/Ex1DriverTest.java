@@ -41,14 +41,15 @@ public class Ex1DriverTest {
     /**
      * Test of main method, of class Ex1Driver.
      */
-    @Test //How to test the Main func? It calls all the following functions...
-    public void testMain() {
-        System.out.println("main");
-        String[] args = null;
-        Ex1Driver.main(args);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+    //How to test the Main func? It calls all the following functions...
+//    @Test
+//    public void testMain() {
+//        System.out.println("main");
+//        String[] args = null;
+//        Ex1Driver.main(args);
+//        // TODO review the generated test code and remove the default call to fail.
+//        fail("The test case is a prototype.");
+//    }
 
     /**
      * Test of task1 method, of class Ex1Driver.
@@ -208,7 +209,7 @@ public class Ex1DriverTest {
     @Test
     public void testTask5() {
         System.out.println("task5");
-        //Test for no input
+        // Test for no input/incorrect input (numbers)
 //        System.setOut(new PrintStream(outContent));
 //        Ex1Driver.task5();
 //        
@@ -216,32 +217,29 @@ public class Ex1DriverTest {
 //            throw new IllegalArgumentException("a message");
 //        });
 //        assertEquals("a message", exception.getMessage());
-//        
-
 //      java.lang.StringIndexOutOfBoundsException: String index out of range: 1
 
+        // Test for a middle name
+        //    Hijack the Input
+        String data1 = "John Q Doe";
+        System.setIn(new ByteArrayInputStream(data1.getBytes()));
         
-        //Hijack the output
+        //    Hijack the output
         System.setOut(new PrintStream(outContent));
         Ex1Driver.task5();
-        System.setOut(System.out);
         
-        // Hijack the input
-        String data = "John Q Doe" + "\nRoman Yasinovskyy";
-        System.setIn(new ByteArrayInputStream(data.getBytes()));
-        Scanner scanner = new Scanner(System.in);
-        System.out.println(scanner.nextLine());
+        // Test without a middle name
+        //    Hijack the Input
+        String data2 = "Roman Yasinovskyy";
+        System.setIn(new ByteArrayInputStream(data2.getBytes()));
         
-        System.setOut(new PrintStream(outContent));
-        String expectedResult1 = "Your initials are JQD\n";
-        assertEquals(expectedResult1, outContent.toString());
-        System.setOut(System.out);
+        Ex1Driver.task5();
         
-        System.out.println(scanner.nextLine());
-        String expectedResult2 = "Your initials are RY\n";
-        
-        System.setOut(new PrintStream(outContent));
-        assertEquals(expectedResult2, outContent.toString());
+        String expectedResult = "Please enter your full name\n" + 
+                                 "Your initials are JQD\n" + 
+                                 "Please enter your full name\n" + 
+                                 "Your initials are RY\n";
+        assertEquals(expectedResult, outContent.toString());
         System.setOut(System.out);
         
     }
@@ -266,17 +264,29 @@ public class Ex1DriverTest {
     public void testTask7() {
         System.out.println("task7");
         
+        // Test for incorrect input/thrown exception
+        
+        // Hijack the Input
+        String num1 = "42";
+        System.setIn(new ByteArrayInputStream(num1.getBytes()));
+        
         //Test 42 (should NOT be found)
         System.setOut(new PrintStream(outContent));
         Ex1Driver.task7();
-        String expectedResult = "";
+        
+        // Hijack the Input
+        String num2 = "24";
+        System.setIn(new ByteArrayInputStream(num2.getBytes()));
+        
+        // Test 24 (should be found)
+        Ex1Driver.task7();
+        
+        String expectedResult = "Enter a number\n" + 
+                                "42 was NOT found in the array\n" +
+                                "Enter a number\n" +
+                                "24 was found in the array\n";
         assertEquals(expectedResult, outContent.toString());
-        
-        //Test 24 (should be found)
-        
-        
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        System.setOut(System.out);
     }
 
     /**
@@ -302,9 +312,20 @@ public class Ex1DriverTest {
     @Test
     public void testTask9() {
         System.out.println("task9");
-        boolean expResult = false;
+        
+        String data1 = "java";
+        System.setIn(new ByteArrayInputStream(data1.getBytes()));
         boolean result = Ex1Driver.task9();
-        assertEquals(expResult, result);
+        
+        boolean expectedResult = false;
+        assertEquals(expectedResult, result);
+        
+        String data2 = "cpp";
+        System.setIn(new ByteArrayInputStream(data2.getBytes()));
+        result = Ex1Driver.task9();
+        
+        expectedResult = true;
+        assertEquals(expectedResult, result);
     }
 
     /**

@@ -1,5 +1,3 @@
-import java.io.InputStream;
-import java.io.PrintStream;
 import java.util.Scanner;
 import java.util.Random;
 
@@ -90,7 +88,7 @@ public class Ex1Driver {
   /**
    * TODO: Task 5: Ask a user to enter their full name and print the initials (ie John Q Doe should yield JQD)
    */
-  public static void task5(InputStream in, PrintStream out) {
+  public static void task5(){
     String fullname = "";
     Scanner keyboard = new Scanner(System.in);
     System.out.println("Please enter your full name");
@@ -128,7 +126,7 @@ public class Ex1Driver {
   public static void task7() {
     Random rnd = new Random();
     rnd.setSeed(252);
-    //KEEP ABOVE CODE
+    //KEEP ABOVE CODE!
     int[] array7 = new int[100];
     for (int idx=0; idx<array7.length; idx++) {
         array7[idx]=rnd.nextInt(100);
@@ -153,8 +151,7 @@ public class Ex1Driver {
     catch (Exception e) {
         System.out.println("Oops! No input detected");
     }
-    System.out.println();
-
+    
     //throw new UnsupportedOperationException("Task 7 is not implemented yet.");
   }
   /**

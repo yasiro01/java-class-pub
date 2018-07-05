@@ -41,15 +41,12 @@ public class Ex1DriverTest {
     /**
      * Test of main method, of class Ex1Driver.
      */
-    //How to test the Main func? It calls all the following functions...
-//    @Test
-//    public void testMain() {
-//        System.out.println("main");
-//        String[] args = null;
-//        Ex1Driver.main(args);
-//        // TODO review the generated test code and remove the default call to fail.
-//        fail("The test case is a prototype.");
-//    }
+    @Test
+    public void testMain() {
+        System.out.println("main");
+        String[] args = null;
+        Ex1Driver.main(args);
+    }
 
     /**
      * Test of task1 method, of class Ex1Driver.
@@ -59,7 +56,7 @@ public class Ex1DriverTest {
         System.out.println("task1");
         System.setOut(new PrintStream(outContent));
         Ex1Driver.task1();
-        String expectedResult = "Hello World\n"; //need \n for ln!
+        String expectedResult = "Hello World\n";
         assertEquals(expectedResult, outContent.toString());
         System.setOut(System.out);
     }
@@ -209,27 +206,18 @@ public class Ex1DriverTest {
     @Test
     public void testTask5() {
         System.out.println("task5");
-        // Test for no input/incorrect input (numbers)
-//        System.setOut(new PrintStream(outContent));
-//        Ex1Driver.task5();
-//        
-//        Throwable exception = assertThrown(IllegalArgumentException.class, () -> {
-//            throw new IllegalArgumentException("a message");
-//        });
-//        assertEquals("a message", exception.getMessage());
-//      java.lang.StringIndexOutOfBoundsException: String index out of range: 1
 
         // Test for a middle name
-        //    Hijack the Input
+        // Hijack the Input
         String data1 = "John Q Doe";
         System.setIn(new ByteArrayInputStream(data1.getBytes()));
         
-        //    Hijack the output
+        //  Hijack the output
         System.setOut(new PrintStream(outContent));
         Ex1Driver.task5();
         
         // Test without a middle name
-        //    Hijack the Input
+        //  Hijack the Input
         String data2 = "Roman Yasinovskyy";
         System.setIn(new ByteArrayInputStream(data2.getBytes()));
         
@@ -239,6 +227,7 @@ public class Ex1DriverTest {
                                  "Your initials are JQD\n" + 
                                  "Please enter your full name\n" + 
                                  "Your initials are RY\n";
+        
         assertEquals(expectedResult, outContent.toString());
         System.setOut(System.out);
         

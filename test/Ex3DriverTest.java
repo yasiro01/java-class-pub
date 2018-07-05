@@ -72,7 +72,7 @@ public class Ex3DriverTest {
         System.out.println("writeMatrix");
         
         // Read the result matrix to make sure it is written correctly
-        String filename = PATH + "testWrite.txt";
+        String filename = "test/testWrite.txt";
         
         int[][] matrix = { {1, 8, 6, 1}, {2, 0, 1, 8} };
         Ex3Driver.writeMatrix(matrix, PATH + "testWrite.txt");

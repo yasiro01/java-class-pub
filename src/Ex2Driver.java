@@ -1,7 +1,7 @@
-package exercise2;
-
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 
 /**
  * @author yasiro01
@@ -58,8 +58,15 @@ public class Ex2Driver {
   /**
    * TODO: Task 4: Write a function that takes an array of integers as a parameter, finds the difference between 100 and the largest element of the array and adds this difference to every element in the array. (Note: after this function call the largest value in the array must be 100.)
    * @param arr
+   * @return
    */
   public static void task4(int[] arr) {
+    System.out.println(Arrays.toString(arr));
+    // Your Code Here
+    // Uncomment following line before testing your code!
+    // System.out.println(diff);
+    // (diff is the currently undefined variable name for the difference)
+    System.out.println(Arrays.toString(arr));
     throw new UnsupportedOperationException("Task 4 is not implemented yet.");
   }
   /**
@@ -78,8 +85,9 @@ public class Ex2Driver {
   }
   /**
    * TODO: Task 7: Create an ArrayList of integer values of size 10 and initialize each element of the ArrayList to a random number between 50 and 100.
+   * @return
    */
-  public static void task7() {
+  public static ArrayList task7() {
     throw new UnsupportedOperationException("Task 7 is not implemented yet.");
   }
   /**
@@ -103,7 +111,7 @@ public class Ex2Driver {
    * @param matrix
    */
   public static void task10(int[][] matrix) {
-    throw new UnsupportedOperationException("Task 3 is not implemented yet.");
+    throw new UnsupportedOperationException("Task 10 is not implemented yet.");
   }
 
 }

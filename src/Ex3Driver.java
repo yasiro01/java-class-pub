@@ -1,6 +1,3 @@
-
-
-//import exercise3.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -64,6 +61,8 @@ public class Ex3Driver {
    * @throws java.io.FileNotFoundException 
    */
   public static void writeMatrix(int[][] matrix, String filename) throws FileNotFoundException {
+    // Make sure to write the numbers of rows and columns in the first line!
+    // (Ref matrix1.txt and matrix2.txt for format)
     throw new UnsupportedOperationException();
   }
   /**
@@ -75,12 +74,12 @@ public class Ex3Driver {
   public static int[][] readFile(String filename) throws FileNotFoundException {
     throw new UnsupportedOperationException();
     /*
-    10. Open the input file and create a Scanner object to read its content
-    20. Read two values (rows and columns) from the first line, if possible
-    30. Create a new 2-D array
-    40. Read data from the file, one line at a time, using the Scanner object
-    50. Split each line into individual tokens and put them into your array
-    60. Return the array
+    1. Open the input file and create a Scanner object to read its content
+    2. Read two values (rows and columns) from the first line, if possible
+    3. Create a new 2-D array
+    4. Read data from the file, one line at a time, using the Scanner object
+    5. Split each line into individual tokens and put them into your array
+    6. Return the array
     */
   }
   /**

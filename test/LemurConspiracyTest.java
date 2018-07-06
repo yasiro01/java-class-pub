@@ -1,4 +1,9 @@
-package exercise6;
+/*
+ *Each group type has a constructor that takes file name as a parameter and reads 
+ * respective animals from that file
+ * Each group type has method size that returns size of the respective collection
+ * Each group type has method getChief that returns the oldest animal in the group
+*/
 
 import org.junit.After;
 import org.junit.AfterClass;

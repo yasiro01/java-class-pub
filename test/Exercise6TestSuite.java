@@ -11,11 +11,16 @@ import org.junit.runners.Suite;
  */
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-  exercise6.CrowMurderTest.class,
-  exercise6.FrogArmyTest.class,
-  exercise6.KangarooMobTest.class,
-  exercise6.LemurConspiracyTest.class,
-  exercise6.OwlParliamentTest.class
+  CrowTest.class,
+  FrogTest.class,
+  KangarooTest.class,
+  LemurTest.class,
+  OwlTest.class,
+  CrowMurderTest.class,
+  FrogArmyTest.class,
+  KangarooMobTest.class,
+  LemurConspiracyTest.class,
+  OwlParliamentTest.class
 })
 public class Exercise6TestSuite {
 

@@ -1,20 +1,23 @@
-package exercise8;
-
 /**
- * Class PaperBook
- * MediaLIbrary code 3
+ * Exercise 8: Class PhysicalMovie
+ * MediaLibrary code 1
+ * 
+ * 1. Implement the constructor that calls a constructor of the superclass
+ * 2. Implement method move() that changes the location of a movie
+ * 3. Implement method getInfo() that returns detailed description of a physical movie
+ * 
  * @author yasiro01
  */
-public class PaperBook extends Book {
-  private final int pages;
+public class PhysicalMovie extends Movie {
+  private final String medium;
   private String location;
 
   /**
-   * Get the number of pages
-   * @return the value of pages
+   * Get the value of medium
+   * @return the value of medium
    */
-  public int getPages() {
-    return pages;
+  public String getMedium() {
+    return medium;
   }
   
   /**
@@ -32,7 +35,7 @@ public class PaperBook extends Book {
   private void setLocation(String location) {
     this.location = location;
   }
-
+  
   /**
    * Move an item to a new location
    * @param newLocation 
@@ -40,5 +43,5 @@ public class PaperBook extends Book {
   public void move(String newLocation) {
     throw new UnsupportedOperationException();
   }
-  
+
 }

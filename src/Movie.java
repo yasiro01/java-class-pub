@@ -1,5 +1,3 @@
-package exercise8;
-
 /**
  * Class Movie
  * @author yasiro01

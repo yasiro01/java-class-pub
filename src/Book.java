@@ -1,5 +1,3 @@
-package exercise8;
-
 /**
  * Class Book
  * @author yasiro01

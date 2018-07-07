@@ -1,7 +1,13 @@
-package exercise8;
-
 /**
- * Class Item
+ * Exercise 8: Class Item
+ *  1. Implement constructor of the class Item
+ *  2. Implement getters and setters (if applicable) for all data members
+ *     (id, title, quantity)
+ *  3. Implement methods checkout (decrement quantity, if possible) and checkin
+ *     (increment quantity)
+ *  4. Implement method toString that returns a meaningful string with the title
+ *     and quantity (is possible). See the output file for example
+ * 
  * @author yasiro01
  */
 public abstract class Item {

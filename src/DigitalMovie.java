@@ -1,10 +1,13 @@
-package exercise8;
-
 import java.util.ArrayList;
 
 /**
- * Class DigitalMovie
- * MediaLIbrary code 2
+ * Exercise 8: Class DigitalMovie
+ * MediaLibrary code 2
+ * 
+ *  1. Implement the constructor that calls a constructor of the superclass
+ *  2. Override methods checkin and checkout. ***They should do nothing***
+ *  3. Implement method getInfo that returns detailed description of a digital movie
+ * 
  * @author yasiro01
  */
 public class DigitalMovie extends Movie {

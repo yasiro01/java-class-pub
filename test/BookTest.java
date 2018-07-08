@@ -1,9 +1,5 @@
-package exercise10;
-
 import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -14,18 +10,7 @@ import static org.junit.Assert.*;
 public class BookTest {
   private Book book1;
   private Book book2;
-  
-  public BookTest() {
-  }
-  
-  @BeforeClass
-  public static void setUpClass() {
-  }
-  
-  @AfterClass
-  public static void tearDownClass() {
-  }
-  
+
   @Before
   public void setUp() {
     book1 = new Book("HARDCORE TWENTY-FOUR", "Janet Evanovich", 15.99, 2017);

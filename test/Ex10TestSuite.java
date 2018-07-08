@@ -1,5 +1,3 @@
-package exercise10;
-
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -13,8 +11,8 @@ import org.junit.runners.Suite;
  */
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-  exercise10.BookTest.class,
-  exercise10.BookShopTest.class})
+  BookTest.class,
+  BookShopTest.class})
 public class Ex10TestSuite {
 
   @BeforeClass

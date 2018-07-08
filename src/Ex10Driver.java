@@ -1,5 +1,3 @@
-package exercise10;
-
 /**
  * Exercise 10 Driver
  * @author yasiro01

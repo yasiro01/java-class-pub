@@ -1,5 +1,3 @@
-package exercise11;
-
 import java.io.ByteArrayOutputStream;
 import java.io.FileDescriptor;
 import java.io.FileOutputStream;

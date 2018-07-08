@@ -1,5 +1,3 @@
-package exercise11;
-
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -12,8 +10,8 @@ import org.junit.runners.Suite;
  */
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-  exercise11.Ex11LogicTest.class,
-  exercise11.FooTest.class
+  Ex11LogicTest.class,
+  FooTest.class
 })
 public class Ex11TestSuite {
 

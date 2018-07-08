@@ -1,5 +1,3 @@
-package exercise11;
-
 /**
  * Exercise 11
  * @author yasiro01

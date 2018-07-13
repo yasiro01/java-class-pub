@@ -1,3 +1,5 @@
+package exercise6;
+
 /*
  *Each group type has a constructor that takes file name as a parameter and reads 
  * respective animals from that file

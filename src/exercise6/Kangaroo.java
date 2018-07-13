@@ -1,3 +1,5 @@
+package exercise6;
+
 /**
  * Class Kangaroo
  * 

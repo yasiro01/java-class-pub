@@ -1,3 +1,5 @@
+package exercise6;
+
 /**
  * Exercise 6
  * @author yasiro01

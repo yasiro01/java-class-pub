@@ -1,3 +1,5 @@
+package exercise6;
+
 /*
  *Each group type has a constructor that takes file name as a parameter and reads 
  * respective animals from that file
@@ -13,14 +15,14 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * Testing LemurConspiracy
+ * Testing OwlParliament
  * @author yasiro01
  */
-public class LemurConspiracyTest {
-  LemurConspiracy instance1 = new LemurConspiracy("data/zoo1.txt");
-  LemurConspiracy instance2 = new LemurConspiracy("data/zoo2.txt");
+public class OwlParliamentTest {
+  OwlParliament instance1 = new OwlParliament("data/zoo1.txt");
+  OwlParliament instance2 = new OwlParliament("data/zoo2.txt");
   
-  public LemurConspiracyTest() {
+  public OwlParliamentTest() {
   }
   
   @BeforeClass
@@ -40,11 +42,11 @@ public class LemurConspiracyTest {
   }
 
   /**
-   * Test of size method, of class LemurConspiracy.
+   * Test of size method, of class OwlParliament.
    */
   @Test
   public void testSize() {
-    System.out.println("LemurConspiracy.size");
+    System.out.println("OwlParliament.size");
     int expResult = 4;
     int result = instance1.size();
     assertEquals(expResult, result);
@@ -54,15 +56,15 @@ public class LemurConspiracyTest {
   }
 
   /**
-   * Test of getChief method, of class LemurConspiracy.
+   * Test of getChief method, of class OwlParliament.
    */
   @Test
   public void testGetChief() {
-    System.out.println("LemurConspiracy.getChief");
-    Lemur expResult = new Lemur("Underrated Thunder", 74);
-    Lemur result = instance1.getChief();
+    System.out.println("OwlParliament.getChief");
+    Owl expResult = new Owl("Earring", 87);
+    Owl result = instance1.getChief();
     assertEquals(expResult, result);
-    expResult = new Lemur("Joyful Juggernaut", 43);
+    expResult = new Owl("Juggernaut", 93);
     result = instance2.getChief();
     assertEquals(expResult, result);
   }

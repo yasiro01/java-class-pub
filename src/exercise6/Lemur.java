@@ -1,3 +1,5 @@
+package exercise6;
+
 /**
  * Exercise6: Class Lemur
  * 

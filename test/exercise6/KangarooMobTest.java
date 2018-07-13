@@ -1,3 +1,5 @@
+package exercise6;
+
 /*
  *Each group type has a constructor that takes file name as a parameter and reads 
  * respective animals from that file
@@ -13,14 +15,14 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * Testing CrowMurder
+ * Testing KangarooMob
  * @author yasiro01
  */
-public class CrowMurderTest {
-  CrowMurder instance1 = new CrowMurder("data/zoo1.txt");
-  CrowMurder instance2 = new CrowMurder("data/zoo2.txt");
+public class KangarooMobTest {
+  KangarooMob instance1 = new KangarooMob("data/zoo1.txt");
+  KangarooMob instance2 = new KangarooMob("data/zoo2.txt");
   
-  public CrowMurderTest() {
+  public KangarooMobTest() {
   }
   
   @BeforeClass
@@ -40,11 +42,11 @@ public class CrowMurderTest {
   }
 
   /**
-   * Test of size method, of class CrowMurder.
+   * Test of size method, of class KangarooMob.
    */
   @Test
   public void testSize() {
-    System.out.println("CrowMurder.size");
+    System.out.println("KangarooMob.size");
     int expResult = 4;
     int result = instance1.size();
     assertEquals(expResult, result);
@@ -54,15 +56,15 @@ public class CrowMurderTest {
   }
 
   /**
-   * Test of getChief method, of class CrowMurder.
+   * Test of getChief method, of class KangarooMob.
    */
   @Test
   public void testGetChief() {
-    System.out.println("CrowMurder.getChief");
-    Crow expResult = new Crow("Juggernaut", 76);
-    Crow result = instance1.getChief();
+    System.out.println("KangarooMob.getChief");
+    Kangaroo expResult = new Kangaroo("Wind", 99);
+    Kangaroo result = instance1.getChief();
     assertEquals(expResult, result);
-    expResult = new Crow("Gentle Isotope", 86);
+    expResult = new Kangaroo("Wild Axe", 93);
     result = instance2.getChief();
     assertEquals(expResult, result);
   }

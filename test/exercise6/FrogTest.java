@@ -1,3 +1,5 @@
+package exercise6;
+
 /*
  * All data members are private
  * Each animal class has a constructor that takes name and age as parameters.

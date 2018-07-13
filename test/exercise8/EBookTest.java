@@ -1,3 +1,5 @@
+package exercise8;
+
 /*
  * Implement the constructo that calls a constructor of the superclass
  * Override methods checkin and checkout. ***They should do nothing***

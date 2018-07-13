@@ -1,7 +1,9 @@
+package exercise8;
+
 /*
  * Implement the constructor that calls a constructor of the superclass
- * Implement method move() that changes the location of a movie
- * Implement method getInfo() that returns detailed description of a physical movie
+ * Override methods checkin and checkout. They should do nothing
+ * Implement method getInfo that returns detailed description of a digital movie
  */
 
 import org.junit.After;
@@ -13,14 +15,14 @@ import static org.junit.Assert.*;
  *
  * @author hoffka04
  */
-public class PhysicalMovieTest {
-    private PhysicalMovie movie1;
+public class DigitalMovieTest {
+    private DigitalMovie digitalMovie1;
     
     @Before
     public void setUp() {
-        movie1 = new PhysicalMovie("Blu-ray", "History", 
-                        "Theodore Melfi", 2016, 
-                        23057239L, "Hidden Figures", 1);
+        digitalMovie1 = new DigitalMovie("Prime Video", 
+                        "John Lee Hancock", 2013, 
+                        133097248L, "Saving Mr. Banks");
     }
     
     @After
@@ -33,8 +35,8 @@ public class PhysicalMovieTest {
     @Test
     public void testGetId() {
         System.out.println("getId");
-        Long expResult = 23057239L;
-        Long result = movie1.getId();
+        Long expResult = 133097248L;
+        Long result = digitalMovie1.getId();
         assertEquals(expResult, result);
     }
     
@@ -44,8 +46,8 @@ public class PhysicalMovieTest {
     @Test
     public void testGetTitle() {
         System.out.println("getTitle");
-        String expResult = "Hidden Figures";
-        String result = movie1.getTitle();
+        String expResult = "Saving Mr. Banks";
+        String result = digitalMovie1.getTitle();
         assertEquals(expResult, result);
     }
     
@@ -56,7 +58,7 @@ public class PhysicalMovieTest {
     public void testGetQuantity() {
         System.out.println("getQuantity");
         int expResult = 1;
-        int result = movie1.getQuantity();
+        int result = digitalMovie1.getQuantity();
         assertEquals(expResult, result);
     }
     
@@ -67,8 +69,8 @@ public class PhysicalMovieTest {
     public void testSetQuantity() {
         System.out.println("setQuantity");
         int qty = 2;
-        movie1.setQuantity(qty);
-        assertEquals(qty, movie1.getQuantity());
+        digitalMovie1.setQuantity(qty);
+        assertEquals(qty, digitalMovie1.getQuantity());
     }
     
     /**
@@ -79,12 +81,12 @@ public class PhysicalMovieTest {
         System.out.println("isAvailable");
         // Test Available
         boolean expResult = true;
-        boolean result = movie1.isAvailable();
+        boolean result = digitalMovie1.isAvailable();
         assertEquals(expResult, result);
-        // Test Not Available
-        movie1.checkout();
-        expResult = false;
-        result = movie1.isAvailable();
+        // Should always be available
+        digitalMovie1.checkout();
+        expResult = true;
+        result = digitalMovie1.isAvailable();
         assertEquals(expResult, result);
     }
     
@@ -94,8 +96,11 @@ public class PhysicalMovieTest {
     @Test
     public void testCheckout() {
         System.out.println("checkout");
-        // Item available
-        // Item unavailable
+        // Checkout should have no effect on the quantity
+        int originalQty = digitalMovie1.getQuantity();
+        digitalMovie1.checkout();
+        int newQty = digitalMovie1.getQuantity();
+        assertEquals(originalQty, newQty);
     }
     
     /**
@@ -104,11 +109,11 @@ public class PhysicalMovieTest {
     @Test
     public void testCheckin() {
         System.out.println("checkin");
-        int originalQty = movie1.getQuantity();
-        // Qty should be one more
-        movie1.checkin();
-        int newQty = movie1.getQuantity();
-        assertEquals(newQty-originalQty, 1);
+        // Checkin should have no effect on the quantity
+        int originalQty = digitalMovie1.getQuantity();
+        digitalMovie1.checkin();
+        int newQty = digitalMovie1.getQuantity();
+        assertEquals(originalQty, newQty);
     }
     
     /**
@@ -117,8 +122,8 @@ public class PhysicalMovieTest {
     @Test
     public void testToString() {
         System.out.println("toString");
-        String expResult = "We have a copy of Hidden Figures";
-        String result = movie1.toString();
+        String expResult = "We have a copy of Saving Mr. Banks";
+        String result = digitalMovie1.toString();
         assertEquals(expResult, result);
     }
     
@@ -128,8 +133,8 @@ public class PhysicalMovieTest {
     @Test
     public void testGetDirector() {
         System.out.println("getDirector");
-        String expResult = "Theodore Melfi";
-        String result = movie1.getDirector();
+        String expResult = "John Lee Hancock";
+        String result = digitalMovie1.getDirector();
         assertEquals(expResult, result);
     }
     
@@ -139,52 +144,41 @@ public class PhysicalMovieTest {
     @Test
     public void testGetReleaseYear() {
         System.out.println("getReleaseYear");
-        int expResult = 2016;
-        int result = movie1.getReleaseYear();
+        int expResult = 2013;
+        int result = digitalMovie1.getReleaseYear();
         assertEquals(expResult, result);
     }
 
     /**
-     * Test of getMedium method, of class PhysicalMovie.
+     * Test of getService method, of class DigitalMovie.
      */
     @Test
-    public void testGetMedium() {
-        System.out.println("getMedium");
-        String expResult = "Blu-ray";
-        String result = movie1.getMedium();
+    public void testGetService() {
+        System.out.println("getService");
+        String expResult = "Prime Video";
+        String result = digitalMovie1.getService();
         assertEquals(expResult, result);
     }
 
     /**
-     * Test of getLocation method, of class PhysicalMovie.
+     * Test of setService method, of class DigitalMovie.
      */
     @Test
-    public void testGetLocation() {
-        System.out.println("getLocation");
-        String expResult = "History";
-        String result = movie1.getLocation();
-        assertEquals(expResult, result);
+    public void testSetService() {
+        System.out.println("setService");
+        String service = "Hulu";
+        digitalMovie1.setService(service);
+        assertEquals(service, digitalMovie1.getService());
     }
 
     /**
-     * Test of move method, of class PhysicalMovie.
-     */
-    @Test
-    public void testMove() {
-        System.out.println("move");
-        String newLocation = "US History";
-        movie1.move(newLocation);
-        assertEquals(newLocation, movie1.getLocation());
-    }
-
-    /**
-     * Test of getInfo method, of class PhysicalMovie.
+     * Test of getInfo method, of class DigitalMovie.
      */
     @Test
     public void testGetInfo() {
         System.out.println("getInfo");
-        String expResult = "Hidden Figures (2016) by Theodore Melfi is located at History";
-        String result = movie1.getInfo();
+        String expResult = "Saving Mr. Banks (2013) by John Lee Hancock is available via Prime Video";
+        String result = digitalMovie1.getInfo();
         assertEquals(expResult, result);
     }
     

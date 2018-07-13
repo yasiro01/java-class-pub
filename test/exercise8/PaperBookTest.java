@@ -1,3 +1,5 @@
+package exercise8;
+
 /*
  * Implement the constructor that calls a constructor of the superclass
  * Implement method move() that changes the location of a book
@@ -100,14 +102,16 @@ public class PaperBookTest {
         book1.checkout();
         int result = book1.getQuantity();
         assertEquals(expResult, result);
-        // Item unavailable
-        System.setOut(new PrintStream(outContent));
-        book1.checkout();
-        String StrExpResult = "Item out of stock\n";
-        assertEquals(StrExpResult, outContent.toString());
         System.setOut(System.out);
     }
-    
+
+    @Test(expected = ArithmeticException.class)
+    public void testCheckoutException() {
+        // Item unavailable
+        book1.setQuantity(0);
+        book1.checkout();
+    }
+
     /**
      * Test of checkin method, of superclass Item
      */
@@ -133,7 +137,7 @@ public class PaperBookTest {
         assertEquals(expResult, result);
         // If the quantity is 0
         book1.checkout();
-        expResult = "We have 0 copies of The Radium Girls";
+        expResult = "We don't have any The Radium Girls available";
         result = book1.toString();
         assertEquals(expResult, result);
         // If the quantity is more than 1

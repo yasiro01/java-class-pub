@@ -1,3 +1,5 @@
+package exercise8;
+
 /*
  * Change to be a test Suite?
  */

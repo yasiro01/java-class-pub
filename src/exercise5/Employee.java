@@ -1,3 +1,5 @@
+package exercise5;
+
 /**
  * Class Employee
  * Task 3: Create a class Employee with the following private data members:

@@ -1,3 +1,5 @@
+package exercise5;
+
 /**
  * Class Laptop
  * Task 6: Create a class Laptop with the following private data members:

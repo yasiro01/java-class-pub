@@ -1,3 +1,5 @@
+package exercise5;
+
 /**
  * Class Student
  * Task 9: Create a class Student with the following private data members:

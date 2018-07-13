@@ -1,3 +1,5 @@
+package exercise5;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;

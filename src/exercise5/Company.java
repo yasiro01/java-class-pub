@@ -1,3 +1,5 @@
+package exercise5;
+
 /**
  * Class Company
  * Task 4: Create a class Company with the following private data members:

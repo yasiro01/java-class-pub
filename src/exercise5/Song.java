@@ -1,3 +1,5 @@
+package exercise5;
+
 /**
  * Class Song
  * Task 7: Create a class Song with the following private data members:

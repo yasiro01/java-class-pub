@@ -1,3 +1,5 @@
+package exercise5;
+
 /**
  * Class Room
  * Task 1: Create a class Room with the following private data members: 

@@ -1,3 +1,5 @@
+package exercise5;
+
 /**
  * Class College
  * Task 5: Create a class College with the following private data members:

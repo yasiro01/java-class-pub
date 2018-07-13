@@ -1,3 +1,5 @@
+package exercise2;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
@@ -61,12 +63,6 @@ public class Ex2Driver {
    * @return
    */
   public static void task4(int[] arr) {
-    System.out.println(Arrays.toString(arr));
-    // Your Code Here
-    // Uncomment following line before testing your code!
-    // System.out.println(diff);
-    // (diff is the currently undefined variable name for the difference)
-    System.out.println(Arrays.toString(arr));
     throw new UnsupportedOperationException("Task 4 is not implemented yet.");
   }
   /**

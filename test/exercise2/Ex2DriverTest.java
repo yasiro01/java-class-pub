@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+package exercise2;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -48,12 +44,12 @@ public class Ex2DriverTest {
     /**
      * Test of main method, of class Ex2Driver.
      */
-    @Test
-    public void testMain() {
-        System.out.println("main");
-        String[] args = null;
-        Ex2Driver.main(args);
-    }
+//    @Test
+//    public void testMain() {
+//        System.out.println("main");
+//        String[] args = null;
+//        Ex2Driver.main(args);
+//    }
 
     /**
      * Test of task1 method, of class Ex2Driver.
@@ -162,13 +158,11 @@ public class Ex2DriverTest {
         int[] numberArr = new int[10];
         for (int i = 0; i < 10; i++) {
           numberArr[i] = rnd.nextInt(100);
-        } 
+        }
         
-        String expResult = "[40, 13, 47, 41, 38, 30, 64, 94, 90, 54]\n" + "6\n" 
-                         + "[46, 19, 53, 47, 44, 36, 70, 100, 96, 60]\n";
+        String expResult = "[46, 19, 53, 47, 44, 36, 70, 100, 96, 60]";
         Ex2Driver.task4(numberArr);
-        
-        assertEquals(expResult, outContent.toString());
+        assertEquals(expResult, Arrays.toString(numberArr));
         
         System.setOut(System.out);
     }

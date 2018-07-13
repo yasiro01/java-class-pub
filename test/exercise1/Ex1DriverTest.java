@@ -43,12 +43,12 @@ public class Ex1DriverTest {
     /**
      * Test of main method, of class Ex1Driver.
      */
-    @Test
-    public void testMain() {
-        System.out.println("main");
-        String[] args = null;
-        Ex1Driver.main(args);
-    }
+//    @Test
+//    public void testMain() {
+//        System.out.println("main");
+//        String[] args = null;
+//        Ex1Driver.main(args);
+//    }
 
     /**
      * Test of task1 method, of class Ex1Driver.

@@ -1,3 +1,5 @@
+package exercise10;
+
 /**
  * Exercise 10: Class Book
  * 

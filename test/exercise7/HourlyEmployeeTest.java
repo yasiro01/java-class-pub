@@ -1,3 +1,5 @@
+package exercise7;
+
 /*
  * Implement class HourlyEmployee that extends class Employee
  * Implement the constructor of the class HourlyEmployee that takes 4 parameters
@@ -103,7 +105,7 @@ public class HourlyEmployeeTest {
     @Test
     public void testToString() {
         System.out.println("toString");
-        String expResult = "HourlyEmployee{wageRate=10.0, hours=20.0}";
+        String expResult = "HourlyEmployee{name=Dwight Schrute, ssn=777-77-7777, wageRate=10.0, hours=20.0}";
         String result = he.toString();
         assertEquals(expResult, result);
     }

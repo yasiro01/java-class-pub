@@ -1,9 +1,11 @@
+package exercise7;
+
 /*
- * Implement class HourlyEmployee that extends class Employee
- * Implement the constructor of the class HourlyEmployee that takes 4 parameters
-    (name, ssn, wageRate, and hours). Name and ssn must be initialized by
+ * Implement class SalariedEmployee that extends class Employee
+ * Implement the constructor of the class SalariedEmployee that takes 3 parameters
+    (name, ssn, salary). Name and ssn must be initialized by
     calling the constructor of the superclass (Employee).
- * Implement getters and setters for all data members of the class HourlyEmployee
+ * Implement getters and setters for all data members of the class SalariedEmployee
  */
 
 import java.io.ByteArrayOutputStream;
@@ -58,7 +60,7 @@ public class SalariedEmployeeTest {
     @Test
     public void testGetNetPay() {
         System.out.println("getNetPay");
-        double expResult = 0.0;
+        double expResult = 100000.0;
         double result = se.getNetPay();
         assertEquals(expResult, result, 0.0);
     }
@@ -79,7 +81,7 @@ public class SalariedEmployeeTest {
     @Test
     public void testToString() {
         System.out.println("toString");
-        String expResult = "SalariedEmployee{salary=100000.0}";
+        String expResult = "SalariedEmployee{name=Phyllis Lapin, ssn=295-09-2578, salary=$100000.00}";
         String result = se.toString();
         assertEquals(expResult, result);
     }

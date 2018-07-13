@@ -1,3 +1,5 @@
+package exercise7;
+
 /*
  * Implement the constructor of the class Employee that takes 2 parameters (name and ssn)
  * Implement getters and setters for all data members of the class Employee
